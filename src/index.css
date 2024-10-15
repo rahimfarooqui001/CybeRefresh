@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #eaeaea;
+  
+}
+.banner-swiper{
+  .swiper-button-next{
+    @apply md:right-[100px]
+    right-2
+
+    
+    
+}
+.swiper-button-prev{
+  @apply md:left-[100px]
+  left-2
+
+}
+.swiper-button-prev, .swiper-button-next {
+  @apply md:w-[50px]
+  md:h-[50px]
+  w-[30px]
+  h-[30px]
+
+  text-black
+  bg-white
+  rounded-full
+  shadow-[0px_5px_15px_rgba(0,0,0,0.35)]
+
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+  @apply md:text-lg
+  text-sm
+}
+/* Custom Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  width: 20px; /* Make the bullet rectangular */
+  height: 8px;
+  background-color: white; /* Default inactive color */
+   border-radius: 2px; /* Slightly rounded rectangle */
+  transition: background-color 0.3s ease;
+}
+
+/* Active bullet styling */
+.swiper-pagination-bullet-active {
+  background-color: #77CC6D; /* Green color for active */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .text-img{
+  background-color: #2f8d46;
+          background-image: url(
+"https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png");
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Steelfish Rg', 'helvetica neue', 
+                            helvetica, arial, sans-serif;
+            font-weight: 800;
+            -webkit-font-smoothing: antialiased;
+} */
+
+
+
+.lets-talk-div{
+  .lets-talk-btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .lets-talk-btn::after, .lets-talk-btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .lets-talk-btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .lets-talk-btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .lets-talk-btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .lets-talk-btn:hover {
+    color: var(--color2);
+   }
+   
+   .lets-talk-btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+}
