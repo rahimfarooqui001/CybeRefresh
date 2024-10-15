@@ -3,17 +3,11 @@
 @tailwind utilities;
 
 
-body{
-  background-color: #eaeaea;
-  
-}
+ /* banner stars  */
 .banner-swiper{
   .swiper-button-next{
     @apply md:right-[100px]
-    right-2
-
-    
-    
+    right-2   
 }
 .swiper-button-prev{
   @apply md:left-[100px]
@@ -40,8 +34,8 @@ body{
 .swiper-pagination-bullet {
   width: 20px; /* Make the bullet rectangular */
   height: 8px;
-  background-color: white; /* Default inactive color */
-   border-radius: 2px; /* Slightly rounded rectangle */
+  background-color: white; 
+   border-radius: 2px; 
   transition: background-color 0.3s ease;
 }
 
@@ -51,35 +45,10 @@ body{
 }
 }
 
+/* banner ends  */
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* .text-img{
-  background-color: #2f8d46;
-          background-image: url(
-"https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png");
-            background-repeat: repeat;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            font-weight: bold;
-            font-family: 'Steelfish Rg', 'helvetica neue', 
-                            helvetica, arial, sans-serif;
-            font-weight: 800;
-            -webkit-font-smoothing: antialiased;
-} */
-
-
+/* lets talk div start  */
 
 .lets-talk-div{
   .lets-talk-btn {
@@ -138,3 +107,70 @@ body{
     transform: scale(.98);
    }
 }
+
+/* lets talk div end  */
+
+
+.service-div{
+  /* From Uiverse.io by joe-watson-sbf */ 
+.get-started-btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.get-started-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.get-started-btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.get-started-btn:hover::before {
+  width: 100%;
+}
+
+.get-started-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.get-started-btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
