@@ -15,9 +15,9 @@ const Home = () => {
 
   return (
     <div>
-    <header>
+    <header >
       <Navbar/>
-      <Crousel/>
+      <Crousel />
     </header>
     
 

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force light theme */
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f8f8f8; /* Adjust this based on your design */
+}
+
+
 
  /* banner stars  */
 .banner-swiper{
