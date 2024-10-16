@@ -3,10 +3,10 @@ import React from 'react';
 import { GiBullseye, GiCyberEye } from "react-icons/gi";
 import aboutSide from '../assets/images/about-side.jpg';
 
-const DigitalTransformationSection = () => {
+const WhoWeAreComponent = () => {
   return (
     <div className="px-4 md:px-10 lg:px-20 py-16 md:py-32">
-      <div className="flex flex-col lg:flex-row justify-center  items-center ">
+      <div className="flex flex-col lg:flex-row justify-center lg:h-[500px] xl:h-[780px] 2xl:h-[700px]">
         {/* Left Section */}
         <div className="lg:w-1/2 px-4 lg:px-8 space-y-6 py-10 about-bg-div">
           <p className="text-sm md:text-lg uppercase font-bold text-primary">Who We Are</p>
@@ -40,13 +40,13 @@ const DigitalTransformationSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full hidden  lg:w-[40%] h-[300px] md:h-[400px] lg:h-full 2xl:h-[600px] lg:flex ">
-          <img src={aboutSide} className='w-full h-full object-cover rounded-lg' alt="About Side" />
+        <div className="w-full hidden  lg:w-[40%] h-[300px] md:h-[400px] bg-yellow-200 lg:h-full  lg:flex ">
+          <img src={aboutSide} className='w-full h-full object-cover ' alt="About Side" />
         </div>
       </div>
     </div>
   );
 };
 
-export default DigitalTransformationSection;
+export default WhoWeAreComponent;
 

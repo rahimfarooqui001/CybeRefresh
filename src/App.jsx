@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
+import AboutUs from "./pages/AboutUs"
 
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
     <div className="">
     <Routes>
      <Route path="/" element={<Home/>}/>
-     {/* <Route path="/cart" element={<Cart/>}/>
-     <Route path="/Signup" element={<SignUp/>}/>
-     <Route path="/wishlist" element={<Wishlist/>}/> */}
+     <Route path="/About-Us" element={<AboutUs/>}/>
+
+    
 
     </Routes>
     </div>
