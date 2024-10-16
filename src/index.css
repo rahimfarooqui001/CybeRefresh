@@ -43,6 +43,8 @@
 .swiper-pagination-bullet-active {
   background-color: #77CC6D; /* Green color for active */
 }
+
+
 }
 
 /* banner ends  */
@@ -110,15 +112,15 @@
 
 /* lets talk div end  */
 
-
+/* service component start  */
 .service-div{
   /* From Uiverse.io by joe-watson-sbf */ 
 .get-started-btn {
-  font-size: 17px;
+  
   background: transparent;
   border: none;
   padding: 1em 1.5em;
-  color: #ffedd3;
+  color: white;
   text-transform: uppercase;
   position: relative;
   transition: 0.5s ease;
@@ -132,12 +134,12 @@
   bottom: 0;
   height: 2px;
   width: 0;
-  background-color: #ffc506;
+  background-color: white;
   transition: 0.5s ease;
 }
 
 .get-started-btn:hover {
-  color: #1e1e2b;
+  color: black;
   transition-delay: 0.5s;
 }
 
@@ -152,7 +154,7 @@
   bottom: 0;
   height: 0;
   width: 100%;
-  background-color: #ffc506;
+  background-color: white;
   transition: 0.4s ease;
   z-index: -1;
 }
@@ -165,12 +167,42 @@
 
 }
 
+.services-swiper{
+  .swiper-button-next{
+    @apply 
+    right-2   
+}
+.swiper-button-prev{
+  @apply
+  left-2
+
+}
+.swiper-button-prev, .swiper-button-next {
+  @apply md:w-[50px]
+  md:h-[50px]
+  w-[30px]
+  h-[30px]
+
+  text-black
+  bg-white
+  hover:bg-primary
+  hover:text-white
+  rounded-full
+  shadow-[0px_5px_15px_rgba(0,0,0,0.35)]
+
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+  @apply md:text-lg
+  text-sm
+}
+}
+
+/* service component end  */
 
 
-
-
-
-
-
-
-
+.about-bg-div{
+    background-image: url(./assets//images/about-bg.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

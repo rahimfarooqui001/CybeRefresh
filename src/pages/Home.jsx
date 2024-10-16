@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import Crousel from '../components/Crousel';
 import Services from '../components/Services';
 import LetsTalk from '../components/LetsTalk';
+import DigitalTransformationSection from '../components/Digital';
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
       <main className="   py-10 ">
         {/* <Services /> */}
         <Services/>
+        <DigitalTransformationSection/>
         {/* Call to Action */}
         <LetsTalk/>
         {/* Industry Specialization */}
@@ -31,7 +33,7 @@ const Home = () => {
       </main>
 
       <footer>
-      <Footer />
+      {/* <Footer /> */}
       </footer>
     </div>
   );

@@ -6,7 +6,7 @@ import Ti from '../assets/images/TI.png';
 
 const SubServices = () => {
   return (
-    <div className='flex justify-between  px-20'>
+    <div className='flex justify-between px-20'>
       {/* Service 1 */}
       <div className=' w-[400px] space-y-4 '>
         <a href="" className='relative'>
