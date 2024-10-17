@@ -14,7 +14,7 @@ const WhoWeAreComponent = () => {
             We Help Transform Your Digital Brands
           </h1>
           <p className="text-gray-500 text-sm md:text-base">
-          At CybeRefresh, we specialize in guiding businesses through the complex journey of digital transformation. From enhancing your online presence to streamlining your operations, we are your trusted partner in delivering transformative digital solutions.
+          We are a team of passionate individuals driven by a common purpose—to redefine the possibilities of technology and guide businesses toward unprecedented success. Our diverse expertise spans industries, and our collective passion fuels the innovation that sets CybeRefresh apart.
           </p>
           <div className="w-full lg:hidden  lg:w-[40%] h-[200px] md:h-[400px] lg:h-[600px] flex justify-center items-center mt-6 lg:mt-0">
           <img src={aboutSide} className='w-full h-full object-cover rounded-lg' alt="About Side" />
@@ -33,14 +33,14 @@ const WhoWeAreComponent = () => {
               <GiCyberEye size={40} className="text-primary" />
               <h2 className="text-xl font-semibold">Our Vision</h2>
               <p className="text-gray-500 text-sm md:text-base">
-              Our vision is to be a global leader in digital transformation, shaping the future by leveraging cutting-edge technologies. We aim to create an ecosystem where businesses thrive in an increasingly digital world, while focusing on sustainability, adaptability, and innovation.
+              At the core of CybeRefresh is a vision to empower businesses with transformative technologies, unlocking their full potential in an ever-evolving digital landscape. We envision a future where technology is not just a tool but a strategic catalyst for growth and resilience.
               </p>
             </div>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="w-full hidden  lg:w-[40%] h-[300px] md:h-[400px] bg-yellow-200 lg:h-full  lg:flex ">
+        <div className="w-full hidden  lg:w-[40%] h-[300px] md:h-[400px]  lg:h-full  lg:flex ">
           <img src={aboutSide} className='w-full h-full object-cover ' alt="About Side" />
         </div>
       </div>

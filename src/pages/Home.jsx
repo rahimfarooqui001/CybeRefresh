@@ -33,9 +33,7 @@ const Home = () => {
         <IndustrySpecialization />
       </main>
 
-      <footer>
       <Footer />
-      </footer>
     </div>
   );
 };

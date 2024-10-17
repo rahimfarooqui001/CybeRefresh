@@ -15,19 +15,25 @@ const Services = () => {
   return (
     <div className='  lg:px-36  2xl:px-44   '>
         <div className=" relative  sm:flex h-[550px]  sm:h-[280px] md:h-[450px]">
+          {/* background images  */}
           <div className="w-[100%]  sm:w-[30%] h-[50%] sm:flex sm:h-full relative ">
             <img src={ss} alt="" className='w-full  h-full' />
           </div>
+          {/* background images  */}
           <div className="w-[100%] sm:w-[70%] h-[50%] relative  sm:flex   sm:h-full md:h-[450px] ">
             <img src={bg} alt="" className='w-full h-full' />
           </div>
           <div className="absolute top-[5%] sm:top-0    w-full h-full block sm:flex  items-center px-2 md:px-10 gap-4 ">
+
+            {/* services we offer  */}
               <div className="service-div p-2 text-center w-full  text-white rounded-xl h-[250px] md:h-72 flex  gap-1 flex-col justify-center  sm:w-fit bg-primary opacity-85  ">
                 <p className='text-md xl:text-lg font-semibold'>What we do</p>
                 <h1 className='text-xl md:text-2xl xl:text-3xl  font-bold'>Services We <br /> <u>Offer</u></h1>
                 <p className='text-xs md:text-md'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis!</p>
                 <button className='get-started-btn text-sm md:text-md font-semibold' >Get Started</button>
               </div>
+
+              {/* Swiper /Crousel/Slider  */}
               <div className=" w-[100%] sm:w-[50%] md:w-[75%] rounded-xl    h-[250px] md:h-72">
                 
 
