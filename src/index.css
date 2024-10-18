@@ -23,24 +23,25 @@
 
  /* banner stars  */
 .banner-swiper{
+  
   .swiper-button-next{
-    @apply md:right-[100px]
-    right-2   
+   @apply right-0 
 }
 .swiper-button-prev{
-  @apply md:left-[100px]
-  left-2
+  @apply 
+  left-0
 
 }
 .swiper-button-prev, .swiper-button-next {
-  @apply md:w-[50px]
-  md:h-[50px]
-  w-[30px]
-  h-[30px]
+  @apply
+   w-[40px]
+  h-[90px]
 
-  text-black
-  bg-white
-  rounded-full
+
+
+  text-white
+  bg-primary
+  
   shadow-[0px_5px_15px_rgba(0,0,0,0.35)]
 
 }
@@ -62,8 +63,24 @@
   background-color: #77CC6D; /* Green color for active */
 }
 
+/* Hide the navigation buttons by default */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the navigation buttons on hover */
+.mySwiper:hover .swiper-button-next,
+.mySwiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+
 
 }
+
+
 
 /* banner ends  */
 
@@ -237,4 +254,102 @@
 
 
 
+/*  */
 
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+  transition-duration: .3s;
+  && .socialSvg path{
+    fill: white;
+  }
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+  && .socialSvg path{
+    fill: white;
+  }
+}
+/* linkdin*/
+.containerThree:hover {
+ background-color:  #0077B5;
+  transition-duration: .3s;
+  && .socialSvg path{
+    fill: white;
+  }
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #25D366;
+  transition-duration: .3s;
+  && .socialSvg path{
+    fill: white;
+  }
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: black;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+  

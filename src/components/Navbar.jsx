@@ -245,6 +245,8 @@ import logo from '../assets/images/logo.png';
 import { IoIosSearch } from "react-icons/io";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import LanguageSelector from './LanguageSelector';
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -316,7 +318,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <div className="w-52 h-20 flex bg-none items-center justify-center">
+        <div className="w-32 h-12 sm:w-52 sm:h-20 flex bg-none items-center justify-center">
           <div className=" h-full w-full">
             <img src={logo} alt="Logo" className='cursor-pointer' />
           </div>
@@ -328,7 +330,7 @@ const Navbar = () => {
             <li><Link  to='/' className='hover:!bg-primary hover:!text-white  '>Home</Link></li>
             <li><Link to='/About-Us' className='hover:!bg-primary hover:!text-white  '>About Us</Link></li>
             <li><Link to='/Blog' className='hover:!bg-primary hover:!text-white  '>Blog</Link></li>
-            <li>
+            {/* <li>
               <details>
                 <summary className='hover:!bg-primary hover:!text-white  '>Services</summary>
                 <ul className='text-black w-52 z-50'>
@@ -338,13 +340,23 @@ const Navbar = () => {
                   <li><Link to='/Digital-Transformation' className="hover:!bg-primary hover:!text-white  ">Digital Transformation</Link></li>
                 </ul>
               </details>
-            </li>
+            </li> */}
+
+<div className="dropdown dropdown-hover">
+  <div tabIndex={0} role="button" className="py-2 px-4 rounded-lg hover:!bg-primary hover:!text-white flex gap-1 items-center ">Services <IoMdArrowDropdown className='mt-1' size={16}/> </div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow">
+  <li><Link to='/IT-Consulting' className="hover:!bg-primary hover:!text-white  ">IT Consulting Services</Link></li>
+                  <li><Link to='/Support-Services' className="hover:!bg-primary hover:!text-white  ">Support Services</Link></li>
+                  <li><Link to='/Technology-Integration' className="hover:!bg-primary hover:!text-white  ">Technology Integration</Link></li>
+                  <li><Link to='/Digital-Transformation' className="hover:!bg-primary hover:!text-white  ">Digital Transformation</Link></li>
+  </ul>
+</div>
             <li><Link to='/Contact-Us' className='hover:!bg-primary hover:!text-white '>Contact</Link></li>
           </ul>
         </div>
 
         {/* Search */}
-        <div className="gap-2 hidden sm:flex">
+        <div className="gap-2 hidden  sm:flex">
           <input
             type="text"
             placeholder="Search"
@@ -352,6 +364,7 @@ const Navbar = () => {
           />
           <IoIosSearch size={25} className="hover:text-primary cursor-pointer" />
         </div>
+        <LanguageSelector/>
       </div>
     </div>
   );

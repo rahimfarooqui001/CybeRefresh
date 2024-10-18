@@ -5,7 +5,7 @@ import aboutSide from '../assets/images/about-side.jpg';
 
 const WhoWeAreComponent = () => {
   return (
-    <div className="px-4 md:px-10 lg:px-20 py-16 md:py-32">
+    <div className="lg:px-4 py-16 md:py-32">
       <div className="flex flex-col lg:flex-row justify-center lg:h-[500px] xl:h-[780px] 2xl:h-[700px]">
         {/* Left Section */}
         <div className="lg:w-1/2 px-4 lg:px-8 space-y-6 py-10 about-bg-div">
@@ -22,14 +22,14 @@ const WhoWeAreComponent = () => {
 
           {/* Mission and Vision Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-            <div className="border p-6 rounded-lg shadow-md flex flex-col items-start space-y-4 border-green-400">
+            <div className="border px-6 py-2 rounded-lg shadow-md flex flex-col items-start  space-y-1 border-green-400">
               <GiBullseye size={45} className="text-primary" />
               <h2 className="text-xl font-semibold">Our Mission</h2>
               <p className="text-gray-500 text-sm md:text-base">
               At CybeRefresh, our mission is to empower businesses by providing innovative digital solutions that drive growth, improve efficiency, and foster long-term success. We are dedicated to aligning technology with your business goals to ensure seamless transformation.
               </p>
             </div>
-            <div className="border p-6 rounded-lg shadow-md flex flex-col items-start space-y-4 border-green-400">
+            <div className="border py-2 px-6 rounded-lg shadow-md flex flex-col items-start space-y-1 border-green-400">
               <GiCyberEye size={40} className="text-primary" />
               <h2 className="text-xl font-semibold">Our Vision</h2>
               <p className="text-gray-500 text-sm md:text-base">
