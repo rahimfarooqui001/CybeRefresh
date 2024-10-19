@@ -26,7 +26,7 @@ const Services = () => {
           <div className="absolute top-[5%] sm:top-0     w-full h-full block sm:flex  items-center px-2 md:px-10 gap-4 ">
 
             {/* services we offer  */}
-              <div className="service-div p-2 text-center w-full  text-white rounded-xl h-[250px] md:h-72 flex  gap-1 flex-col justify-center  sm:w-fit bg-primary opacity-85  ">
+              <div className="service-div  p-2 sm:px-8 text-center w-[70%] mx-auto  text-white rounded-xl h-[250px] md:h-72 flex  gap-1 flex-col justify-center  sm:w-fit bg-primary opacity-85  ">
                 <h1 className='text-xl md:text-2xl xl:text-3xl  font-bold'>Services We <br /> Offer</h1>
                 <button className='get-started-btn text-sm md:text-md font-semibold mt-10' >Let's Connect</button>
               </div>

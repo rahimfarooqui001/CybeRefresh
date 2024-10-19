@@ -3,7 +3,7 @@ import React from 'react'
 const LetsTalk = () => {
   return (
     <div>
-       <div className="flex justify-center px-20   mb-10">
+       <div className="flex justify-center sm:px-20   mb-10">
           <div className="bg-base-200 text-center w-3/2 px-10 py-8 space-y-8">
             <h1 className="text-2xl font-semibold text-img">In the Cyber Realm...Refresh is the new Lifeline</h1>
             <p className="text-md md:text-lg text-gray-400">

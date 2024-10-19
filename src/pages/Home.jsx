@@ -24,7 +24,7 @@ const Home = () => {
     
 
       {/* Main Content */}
-      <main className="   py-10 -z- ">
+      <main className="   py-10  ">
         {/* Services */}
         <Services/>
         {/* Who We Are Component */}

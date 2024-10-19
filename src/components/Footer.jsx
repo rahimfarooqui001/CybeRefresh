@@ -44,7 +44,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className='relative mt-20'>
+    <div className='relative  sm:mt-10'>
       {/* <footer className="footer flex flex-col md:flex-row justify-between px-4 md:px-32 bg-[#27313D] text-white p-10">
         <nav className="mb-6 md:mb-0">
           <h6 className="normal-case font-bold text-xl flex justify-center items-center gap-2">
@@ -87,14 +87,14 @@ const Footer = () => {
       </footer> */}
 
       <div className="divider bg-primary h-1 w-full m-0 -mt-2"></div>
-      <footer className="footer bg-[#27313D]  text-white px-4 md:px-10 py-4">
+      <footer className="footer bg-[#27313D]  text-white px-4 md:px-20 py-4">
         <aside className="grid-flow-col items-center h-full">
-          <p className='text-xs md:text-sm  h-full flex items-center '>
+          <p className='text-[10px] sm:text-xs md:text-sm  h-full flex items-center '>
             Copyright © 2023 CybeRefresh. All rights reserved.
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
-          <div className="grid grid-flow-col  gap-4 card">
+          <div className="grid grid-flow-col gap-1  sm:gap-4 card">
             {/* <Link to="#">
               <IoLogoWhatsapp size={30}/>
             </Link>

@@ -65,13 +65,9 @@ const LanguageSelector = () => {
 
   return (
     <div>
-      
-
-    <ul className="menu p-0 lg:menu-horizontal bg-base-200 rounded-box ">
-  <li>
-    <details open={isDropdownOpen} onToggle={() => setIsDropdownOpen(!isDropdownOpen)} >
-      <summary className='hover:!bg-primary hover:!text-white' >
-      {selectedLanguage === 'en' ? (
+      <div className="dropdown dropdown-hover">
+  <div tabIndex={0} role="button" className=" flex justify-center items-center rounded-md gap-1 bg-base-200 hover:!bg-primary hover:!text-white px-2 py-1">
+  {selectedLanguage === 'en' ? (
           <>
             <img src={english} alt="English" className="w-5 h-[13px] " />
             EN
@@ -82,9 +78,9 @@ const LanguageSelector = () => {
             SA
           </>
         )}
-      </summary>
-      <ul className='z-10 ' id='language-list'>
-      <li
+  </div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-20 w-20 p-2 shadow">
+  <li
             onClick={() => handleLanguageChange('en')}
             className="flex items-center p-2 hover:bg-primary hover:text-white rounded-lg cursor-pointer"
           >
@@ -98,11 +94,11 @@ const LanguageSelector = () => {
             {/* <img src={english} alt="Arabic" className="w-5 h-5 mr-1" /> */}
             Arabic
           </li>
-        
-      </ul>
-    </details>
-  </li>
-</ul>
+  </ul>
+</div>
+      
+
+  
 
 
 
