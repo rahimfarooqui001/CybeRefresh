@@ -63,10 +63,10 @@ const Navbar = () => {
                     <details>
                       <summary className="hover:!bg-primary hover:!text-white ">Services</summary>
                       <ul>
-                        <li><Link to='/IT-Consulting' className="hover:!bg-primary hover:!text-white ">IT Consulting Services</Link></li>
-                        <li><Link to='/Support-Services' className="hover:!bg-primary hover:!text-white ">Support Services</Link></li>
-                        <li><Link to='/Technology-Integration' className="hover:!bg-primary hover:!text-white ">Technology Integration</Link></li>
-                        <li><Link to='/Digital-Transformation' className="hover:!bg-primary hover:!text-white ">Digital Transformation</Link></li>
+                        <li><Link to='/consulting' className="hover:!bg-primary hover:!text-white ">IT Consulting Services</Link></li>
+                        <li><Link to='/it-support' className="hover:!bg-primary hover:!text-white ">Support Services</Link></li>
+                        <li><Link to='/tech-integration' className="hover:!bg-primary hover:!text-white ">Technology Integration</Link></li>
+                        <li><Link to='/digital-transformation' className="hover:!bg-primary hover:!text-white ">Digital Transformation</Link></li>
                       </ul>
                     </details>
                   </li>
@@ -107,10 +107,10 @@ const Navbar = () => {
 <div className="dropdown dropdown-hover">
   <div tabIndex={0} role="button" className="py-2 px-4 rounded-lg hover:!bg-primary hover:!text-white flex gap-1 items-center ">Services <IoMdArrowDropdown className='mt-1' size={16}/> </div>
   <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow">
-  <li><Link to='/IT-Consulting' className="hover:!bg-primary hover:!text-white  ">IT Consulting Services</Link></li>
-                  <li><Link to='/Support-Services' className="hover:!bg-primary hover:!text-white  ">Support Services</Link></li>
-                  <li><Link to='/Technology-Integration' className="hover:!bg-primary hover:!text-white  ">Technology Integration</Link></li>
-                  <li><Link to='/Digital-Transformation' className="hover:!bg-primary hover:!text-white  ">Digital Transformation</Link></li>
+  <li><Link to='/consulting' className="hover:!bg-primary hover:!text-white  ">IT Consulting Services</Link></li>
+                  <li><Link to='/it-support' className="hover:!bg-primary hover:!text-white  ">Support Services</Link></li>
+                  <li><Link to='/tech-integration' className="hover:!bg-primary hover:!text-white  ">Technology Integration</Link></li>
+                  <li><Link to='/digital-transformation' className="hover:!bg-primary hover:!text-white  ">Digital Transformation</Link></li>
   </ul>
 </div>
             <li><Link to='/Contact' className='hover:!bg-primary hover:!text-white '>Contact</Link></li>

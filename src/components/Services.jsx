@@ -11,6 +11,7 @@ import support from '../assets/images/support.avif'
 import integration from '../assets/images/Integration.avif'
 import digital from '../assets/images/Digital.avif'
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const Services = () => {
   return (
     <div className='  lg:px-20   '>
@@ -81,7 +82,7 @@ const Services = () => {
                 <img src={consulting} alt="" className='w-20 h-20 md:w-28 md:h-28' />
                 <h1 className='text-xl  font-semibold hover:text-primary'>IT Consulting Services</h1>
                 <p className='text-sm'>Strategic IT consulting from CyberRefresh for smarter, more efficient operations.</p>
-                <a className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></a>
+                <Link to={'/consulting'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
               </div>
                 </SwiperSlide>
 
@@ -90,7 +91,7 @@ const Services = () => {
                 <img src={support} alt="" className='w-20 h-20 md:w-28 md:h-28' />
                 <h1 className='text-xl  font-semibold hover:text-primary'>Support Services</h1>
                 <p className='text-sm'>Round-the-clock support services from CyberRefresh for uninterrupted operations.</p>
-                <a className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></a>
+                <Link to={'/it-support'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
               </div>
                 </SwiperSlide>
 
@@ -99,7 +100,7 @@ const Services = () => {
                 <img src={integration} alt="" className='w-20 h-20 md:w-28 md:h-28' />
                 <h1 className='text-xl  font-semibold hover:text-primary'>Technology Integration</h1>
                 <p className='text-sm '>CyberRefresh bridges your technology for seamless, integrated solutions.</p>
-                <a className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></a>
+                <Link to={'/tech-integration'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
               </div>
                 </SwiperSlide>
 
@@ -109,7 +110,7 @@ const Services = () => {
                 <img src={digital} alt="" className='w-20 h-20 md:w-28 md:h-28' />
                 <h1 className='text-xl  font-semibold hover:text-primary'>Digital Transformation</h1>
                 <p className='text-sm'>Empowering businesses through seamless digital transformation at CyberRefresh.</p>
-                <a className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></a>
+                <Link to={'/digital-transformation'}  className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
               </div>
                 </SwiperSlide>
 

@@ -34,8 +34,11 @@
 }
 .swiper-button-prev, .swiper-button-next {
   @apply
-   w-[40px]
-  h-[90px]
+   sm:w-[40px]
+  sm:h-[90px]
+
+  w-[20px]
+  h-[50px]
 
 
 
@@ -415,5 +418,17 @@
     top: -45%;
     background-color: #77cc6d;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+}
+
+
+
+.support-services-div{
+
+  ul{
+    li{
+      @apply
+      relative pl-6 before:content-['■'] before:text-primary before:text-[9px] before:absolute before:left-0 before:pr-2
+    }
   }
 }

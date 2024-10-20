@@ -1,17 +1,41 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const LetsTalk = () => {
+  const navigate = useNavigate()
+  const sectionsRef = useRef([]);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    sectionsRef.current.forEach((section, index) => {
+      gsap.fromTo(section, 
+        { opacity: 0, y: 50 }, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+          }
+        });
+    });
+  }, []);
   return (
     <div>
        <div className="flex justify-center sm:px-20   mb-10">
-          <div className="bg-base-200 text-center w-3/2 px-10 py-8 space-y-8">
+          <section ref={(el) => sectionsRef.current[0] = el} className="bg-base-200 text-center w-3/2 px-10 py-8 space-y-8">
             <h1 className="text-2xl font-semibold text-img">In the Cyber Realm...Refresh is the new Lifeline</h1>
             <p className="text-md md:text-lg text-gray-400">
               At CybeRefresh, our unwavering commitment is to empower users with state-of-the-art technology, 
               ensuring they stay at the forefront of innovation.
             </p>
             <div className="lets-talk-div">
-            <button
+            <button onClick={()=>navigate('/Contact')}
               type="submit"
               className="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-primary text-white 
               backdrop-blur-md lg:font-semibold isolation-auto border-primary px-4 py-2 overflow-hidden border-2 
@@ -31,7 +55,7 @@ const LetsTalk = () => {
               </svg>
             </button>
             </div>
-          </div>
+          </section>
         </div> 
     </div>
   )

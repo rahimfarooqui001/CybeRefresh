@@ -44,7 +44,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className='relative  sm:mt-10'>
+    <div className='relative  '>
       {/* <footer className="footer flex flex-col md:flex-row justify-between px-4 md:px-32 bg-[#27313D] text-white p-10">
         <nav className="mb-6 md:mb-0">
           <h6 className="normal-case font-bold text-xl flex justify-center items-center gap-2">
