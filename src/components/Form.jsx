@@ -2,9 +2,13 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import LocationMap from '../assets/images/Location Map.png'
 
 const Form = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+ 
+  const { register, handleSubmit, formState: { errors }, trigger } = useForm({
+    mode: 'onTouched', 
+  });
 
   // This function gets called upon form submission
   const onSubmit = (data) => {
@@ -12,8 +16,8 @@ const Form = () => {
   };
 
   return (
-    <div className="px-6 sm:px-20 flex gap-5 mb-12">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 w-full sm:w-[50%] pt-12 form-div">
+    <div className="px-6 lg:px-20 py-12   gap-5 grid grid-cols-1 md:grid-cols-2 mb-12">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8   form-div">
         <h1 className="text-2xl font-bold">Get In Touch</h1>
 
         <div className="space-y-6">
@@ -25,7 +29,7 @@ const Form = () => {
             {...register('name', {
               required: 'Name is required!',
               maxLength: { value: 30, message: 'Name must not exceed 30 characters!' },
-              minLength: { value: 3, message: 'Name must be at least Greater than 3 character!'},
+              minLength: { value: 4, message: 'Name must be at least 4 characters!' },
               pattern: { value: /^[A-Za-z\s]+$/i, message: 'Name should not contain numbers or special characters!' },
             })}
             className="w-full outline-none focus:border-primary border-[2px] border-slate-200 rounded-md h-12 px-2"
@@ -72,6 +76,9 @@ const Form = () => {
           </button>
         </div>
       </form>
+      <div className='hidden md:flex'>
+        <img src={LocationMap} alt="" className='object-cover aspect-auto' />
+      </div>
     </div>
   );
 };

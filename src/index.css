@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* Force light theme */
 :root {
   color-scheme: light;
@@ -270,7 +272,7 @@
   align-items: center;
   justify-content: center;
  
-  gap: 20px;
+  /* gap: 20px; */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
@@ -432,3 +434,335 @@
     }
   }
 }
+
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom img {
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(70%);
+}
+
+/* The Transformation */
+.img-hover-zoom:hover img {
+  filter: brightness(100%);
+  transform: scale(1.3);
+  overflow: hidden;
+}
+
+
+
+.tech-int{
+ 
+  .buttons button {
+    width: 150px;
+    height: 50px;
+    color: #568fa6;
+    position: relative;
+    overflow: hidden;
+   
+    transition: all 0.3s ease;
+    cursor: pointer;
+    /* border: 0; */
+   
+    border-radius: 3px;
+  }
+  
+  .buttons button:before, .buttons button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .buttons button span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  
+  .buttons button span:before, .buttons button span:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button span:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+ 
+  
+  .buttons button:hover:before, .buttons button:hover:after {
+    width: 100%;
+  }
+  
+  .buttons button:hover span {
+    z-index: 1;
+  }
+  
+  .buttons button:hover span:before, .buttons button:hover span:after {
+    height: 100%;
+  }
+  
+
+  
+  
+  
+  
+ 
+  
+  
+  
+
+  
+
+  
+  .buttons button:active {
+    outline: none;
+    border: none;
+  }
+  
+  .buttons button:focus {
+    outline: 0;
+  }
+}
+
+
+
+
+/*Blogs starts  */
+
+
+ 
+  .main-blog-div .blog-hover-effect {
+   
+    
+    position: relative;
+    overflow: hidden;
+   
+    transition: all 0.3s ease;
+    
+    /* border: 0; */
+   
+    border-radius: 3px;
+  }
+  
+  .main-blog-div .blog-hover-effect:before, .main-blog-div .blog-hover-effect:after {
+    content: "";
+    position: absolute;
+    width:0;
+    height: 3px;
+    background-color: #77cc6d;
+    transition: all 0.9s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .main-blog-div .blog-hover-effect:before {
+    right: 0;
+    top: 0;
+    transition: all 0.9s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .main-blog-div .blog-hover-effect:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .main-blog-div .blog-hover-effect span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  
+  .main-blog-div .blog-hover-effect span:before, .main-blog-div .blog-hover-effect span:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 0;
+    background-color: #77cc6d;
+    transition: all 0.9s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .main-blog-div .blog-hover-effect span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.9s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .main-blog-div .blog-hover-effect span:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+ 
+  
+  .main-blog-div .blog-hover-effect:hover:before, .main-blog-div .blog-hover-effect:hover:after {
+    width: 100%;
+  }
+  
+  .main-blog-div button:hover span {
+    z-index: 1;
+  }
+  
+  .main-blog-div .blog-hover-effect:hover span:before, .main-blog-div .blog-hover-effect:hover span:after {
+    height: 100%;
+  }
+  
+
+  
+  
+  
+  
+ 
+  
+  
+  
+
+  
+
+  
+  .buttons button:active {
+    outline: none;
+    border: none;
+  }
+  
+  .buttons button:focus {
+    outline: 0;
+  }
+
+
+  /*Blogs Ends  */
+
+/* services next -prev btns  */
+  .next-prev-service-div{
+    .cta-next,.cta-prev {
+      border: none;
+      background: none;
+      cursor: pointer;
+      
+    }
+    
+    .cta-next span {
+      
+      @apply pb-2
+      pr-4
+      uppercase
+      sm:tracking-[4px]
+      tracking-widest
+    }
+    .cta-prev span {
+      
+      @apply pb-2
+      pr-4
+      uppercase
+      sm:tracking-[4px]
+      tracking-[3px]
+    }
+    
+    .cta-next svg {
+      transform: translateX(-8px);
+      transition: all 0.3s ease;
+    }
+    
+    .cta-next:hover svg {
+      transform: translateX(0);
+    }
+
+    .cta-prev svg {
+      transform: translateX(8px);
+      transition: all 0.3s ease;
+    }
+    
+    .cta-prev:hover svg {
+      transform: translateX(0);
+    }
+    
+    .cta-next:active svg {
+      transform: scale(0.9);
+    }
+    
+    
+    .hover-underline-animation-next, .hover-underline-animation-prev {
+      position: relative;
+      
+      padding-bottom: 10px;
+    }
+    
+    .hover-underline-animation-next:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+     background-color: #77cc6d;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .cta-next:hover .hover-underline-animation-next:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+
+    .hover-underline-animation-prev::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      right: 0;
+     background-color: #77cc6d;
+      transform-origin: bottom left;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .cta-prev:hover .hover-underline-animation-prev::before {
+      transform: scaleX(1);
+      transform-origin: bottom right;
+    }
+
+
+  }
+
+  /*  */

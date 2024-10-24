@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { RiContactsLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 const ItConsultingServices = () => {
   const sectionsRef = useRef([]);
@@ -26,9 +29,9 @@ const ItConsultingServices = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 py-16 px-10 md:px-32 text-gray-800">
+    <div className="bg-gray-100 relative py-16 px-4 md:px-10 lg:px-32 text-gray-800">
      <section ref={(el) => sectionsRef.current[0] = el}>
-     <h1 className="text-[60px]  font-bold  mb-8">IT Consulting Services</h1>
+     <h1 className="text-[30px] sm:text-[60px]  font-bold  mb-8">IT Consulting Services</h1>
       <div className='bg-primary w-10 h-1 mb-8'></div>
       <p className='mb-12 text-lg'>In the realm of IT consulting, CybeRefresh emerges as a distinctive force, setting new standards in innovation, client-centricity, and transformative impact. Explore the unique facets that elevate CybeRefresh above the conventional, making it a trusted partner in the digital evolution of businesses.</p>
       
@@ -101,11 +104,18 @@ const ItConsultingServices = () => {
           driving sustainable success through technology.
         </p>
       </section>
+
+      <div className='next-prev-service-div text-[10px] flex flex-col sm:flex-row space-y-2 sm:space-y-0 items-center justify-between '>
+     <Link to={'/it-support'} className="cta-next">
+  <span className="hover-underline-animation-next  flex items-center gap-3 text-primary">Support Services<LiaLongArrowAltRightSolid size={25}/>
+  </span>
+</Link>
+      </div>
       
-      <div className="text-center mt-16">
-        <button className="bg-primary text-white px-6 py-3 rounded-md text-lg font-bold hover:bg-secondary">
-          Contact Us
-        </button>
+      <div className=" absolute top-[20%] sm:top-[30%]   right-20 z-50   text-center">
+        <Link to={'/contact'} className="bg-primary fixed text-white  px-3 py-3 rounded-full  font-bold">
+        <RiContactsLine size={30}/>
+        </Link>
       </div>
     </div>
   );

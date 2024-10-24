@@ -5,8 +5,8 @@ import aboutSide from '../assets/images/about-side.jpg';
 
 const WhoWeAreComponent = () => {
   return (
-    <div className="lg:px-4 py-16 md:py-32">
-      <div className="flex flex-col lg:flex-row justify-center lg:h-[500px] xl:h-[780px] 2xl:h-[700px]">
+    <div className="lg:px-4 py-16 md:py-12">
+      <div className="flex flex-col lg:flex-row justify-center lg:h-[600px] ">
         {/* Left Section */}
         <div className="lg:w-1/2 px-4 lg:px-8 space-y-6 py-10 about-bg-div">
           <p className="text-sm md:text-lg uppercase font-bold text-primary">Who We Are</p>
@@ -17,7 +17,7 @@ const WhoWeAreComponent = () => {
           We are a team of passionate individuals driven by a common purpose—to redefine the possibilities of technology and guide businesses toward unprecedented success. Our diverse expertise spans industries, and our collective passion fuels the innovation that sets CybeRefresh apart.
           </p>
           <div className="w-full lg:hidden  lg:w-[40%] h-[200px] md:h-[400px] lg:h-[600px] flex justify-center items-center mt-6 lg:mt-0">
-          <img src={aboutSide} className='w-full h-full object-cover rounded-lg' alt="About Side" />
+          <img src={aboutSide} className='w-full h-full object-cover rounded-lg  aspect-auto' alt="About Side" />
         </div>
 
           {/* Mission and Vision Boxes */}
@@ -25,14 +25,14 @@ const WhoWeAreComponent = () => {
             <div className="border px-6 py-2 rounded-lg shadow-md flex flex-col items-start  space-y-1 border-green-400">
               <GiBullseye size={45} className="text-primary" />
               <h2 className="text-xl font-semibold">Our Mission</h2>
-              <p className="text-gray-500 text-sm md:text-base ">
+              <p className="text-gray-500 text-sm md:text-base text-ellipsis line-clamp-4 overflow-hidden ">
               At CybeRefresh, our mission is to empower businesses by providing innovative digital solutions that drive growth, improve efficiency, and foster long-term success. We are dedicated to aligning technology with your business goals to ensure seamless transformation.
               </p>
             </div>
             <div className="border py-2 px-6 rounded-lg shadow-md flex flex-col items-start space-y-1 border-green-400">
               <GiCyberEye size={40} className="text-primary" />
               <h2 className="text-xl font-semibold">Our Vision</h2>
-              <p className="text-gray-500 text-sm md:text-base ">
+              <p className="text-gray-500 text-sm md:text-base text-ellipsis line-clamp-4 overflow-hidden ">
               At the core of CybeRefresh is a vision to empower businesses with transformative technologies, unlocking their full potential in an ever-evolving digital landscape. We envision a future where technology is not just a tool but a strategic catalyst for growth and resilience.
               </p>
             </div>

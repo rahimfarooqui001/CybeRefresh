@@ -88,13 +88,14 @@ const Footer = () => {
 
       <div className="divider bg-primary h-1 w-full m-0 -mt-2"></div>
       <footer className="footer bg-[#27313D]  text-white px-4 md:px-20 py-4">
-        <aside className="grid-flow-col items-center h-full">
-          <p className='text-[10px] sm:text-xs md:text-sm  h-full flex items-center '>
+        <aside className="grid-flow-row items-center h-full">
+          <p className='text-[10px] sm:text-xs md:text-sm '>
             Copyright © 2023 CybeRefresh. All rights reserved.
           </p>
+          <p className=' text-[10px] sm:text-xs md:text-sm'>CANADA | USA | INDIA | SAUDI ARABIA | UAE</p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
-          <div className="grid grid-flow-col gap-1  sm:gap-4 card">
+          <div className="grid grid-flow-col gap-3  sm:gap-5 card">
             {/* <Link to="#">
               <IoLogoWhatsapp size={30}/>
             </Link>

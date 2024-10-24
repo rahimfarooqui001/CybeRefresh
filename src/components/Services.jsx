@@ -13,23 +13,50 @@ import digital from '../assets/images/Digital.avif'
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Services = () => {
+  const data=[{
+    title:'IT Consulting Services',
+    img:consulting,
+    shortParagraph:'Strategic IT consulting from CyberRefresh for smarter, more efficient operations.',
+    to:'/consulting'
+  },
+  {
+    title:'Support Services',
+    img:support,
+    shortParagraph:'Round-the-clock support services from CyberRefresh for uninterrupted operations.',
+    to:'/it-support'
+  },
+  {
+    title:'Technology Integration',
+    img:integration,
+    shortParagraph:'CyberRefresh bridges your technology for seamless, integrated solutions.',
+    to:'/tech-integration'
+  },
+  {
+    title:'Digital Transformation',
+    img:digital,
+    shortParagraph:'Empowering businesses through seamless digital transformation at CyberRefresh.',
+    to:'/digital-transformation'
+  }
+]
   return (
-    <div className='  lg:px-20   '>
+
+    
+    <div className='  lg:px-20  pt-10'>
         <div className=" relative  sm:flex h-[550px]  sm:h-[280px] md:h-[450px]">
           {/* background images  */}
           <div className="w-[100%]  sm:w-[30%] h-[50%] sm:flex sm:h-full relative ">
-            <img src={ss} alt="" className='w-full  h-full' />
+            <img src={ss} alt="" className='w-full  h-full aspect-auto object-cover' />
           </div>
           {/* background images  */}
           <div className="w-[100%] sm:w-[70%] h-[50%] relative  sm:flex   sm:h-full md:h-[450px] ">
-            <img src={bg} alt="" className='w-full h-full' />
+            <img src={bg} alt="" className='w-full h-full aspect-auto object-cover' />
           </div>
           <div className="absolute top-[5%] sm:top-0     w-full h-full block sm:flex  items-center px-2 md:px-10 gap-4 ">
 
             {/* services we offer  */}
               <div className="service-div  p-2 sm:px-8 text-center w-[70%] mx-auto  text-white rounded-xl h-[250px] md:h-72 flex  gap-1 flex-col justify-center  sm:w-fit bg-primary opacity-85  ">
-                <h1 className='text-xl md:text-2xl xl:text-3xl  font-bold'>Services We <br /> Offer</h1>
-                <button className='get-started-btn text-sm md:text-md font-semibold mt-10' >Let's Connect</button>
+                <Link className='text-xl md:text-2xl xl:text-3xl  font-bold'>Services We <br /> Offer</Link>
+                <Link to={'/contact'} className='get-started-btn text-sm md:text-md font-semibold mt-10' >Let's Connect</Link>
               </div>
 
               {/* Swiper /Crousel/Slider  */}
@@ -72,51 +99,27 @@ const Services = () => {
           clickable: true,
         }}
         modules={[Keyboard,Autoplay ,Navigation]}
-        className="mySwiper services-swiper  h-full w-full "
+        className="mySwiper services-swiper  h-full w-full rounded-xl "
       >
 
        
        
-                <SwiperSlide  >
-                <div className=" p-2 md:p-4 text-center  rounded-xl h-full flex items-center flex-col justify-center  gap-1  w-fit bg-white  ">
-                <img src={consulting} alt="" className='w-20 h-20 md:w-28 md:h-28' />
-                <h1 className='text-xl  font-semibold hover:text-primary'>IT Consulting Services</h1>
-                <p className='text-sm'>Strategic IT consulting from CyberRefresh for smarter, more efficient operations.</p>
-                <Link to={'/consulting'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
-              </div>
-                </SwiperSlide>
-
-                <SwiperSlide  >
-                <div className=" p-2 md:p-4 text-center  rounded-xl h-full flex items-center flex-col justify-center  gap-1 w-fit bg-white   ">
-                <img src={support} alt="" className='w-20 h-20 md:w-28 md:h-28' />
-                <h1 className='text-xl  font-semibold hover:text-primary'>Support Services</h1>
-                <p className='text-sm'>Round-the-clock support services from CyberRefresh for uninterrupted operations.</p>
-                <Link to={'/it-support'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
-              </div>
-                </SwiperSlide>
-
-                <SwiperSlide >
-                <div className=" p-2 md:p-4 text-center  rounded-xl h-full flex items-center flex-col justify-center  gap-1 w-fit bg-white   ">
-                <img src={integration} alt="" className='w-20 h-20 md:w-28 md:h-28' />
-                <h1 className='text-xl  font-semibold hover:text-primary'>Technology Integration</h1>
-                <p className='text-sm '>CyberRefresh bridges your technology for seamless, integrated solutions.</p>
-                <Link to={'/tech-integration'} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
-              </div>
-                </SwiperSlide>
-
-
-                <SwiperSlide  >
-                <div className=" p-2 md:p-4 text-center  rounded-xl h-full flex items-center flex-col justify-center  gap-1 w-fit bg-white   ">
-                <img src={digital} alt="" className='w-20 h-20 md:w-28 md:h-28' />
-                <h1 className='text-xl  font-semibold hover:text-primary'>Digital Transformation</h1>
-                <p className='text-sm'>Empowering businesses through seamless digital transformation at CyberRefresh.</p>
-                <Link to={'/digital-transformation'}  className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
-              </div>
-                </SwiperSlide>
-
-
                
-          
+
+{
+  data.map((item,index)=>(
+<SwiperSlide key={index}  >
+                <div className=" p-2 md:p-4 text-center  rounded-xl h-full flex items-center flex-col justify-center  gap-1  w-fit bg-white  ">
+                <Link to={item.to}><img src={item.img} alt="" className='w-20 h-20 md:w-28 md:h-28 aspect-auto object-cover rounded-xl' /></Link>
+                <Link to={item.to} className='text-xl  font-semibold hover:text-primary' >{item.title}</Link>
+                <p className='text-sm'>{item.shortParagraph}</p>
+                <Link to={item.to} className='gap-1 text-sm text-primary flex items-center justify-center cursor-pointer' >read more <FaArrowRight className='mt-1' size={10}/></Link>
+              </div>
+                </SwiperSlide>
+  ))
+}
+               
+
        
         
 

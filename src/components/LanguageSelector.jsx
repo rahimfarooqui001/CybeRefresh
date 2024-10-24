@@ -162,7 +162,7 @@ const LanguageSelector = () => {
         <div
           tabIndex={0}
           role="button"
-          className="flex justify-center items-center rounded-md gap-1 bg-base-200 hover:bg-primary hover:text-white px-2 py-1"
+          className="flex justify-center items-center rounded-md gap-1 bg-secondary hover:bg-primary hover:text-white px-2 py-1"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
           {selectedLanguage === 'en' ? (
@@ -178,7 +178,7 @@ const LanguageSelector = () => {
           )}
         </div>
         {isDropdownOpen && (
-          <ul className="dropdown-content menu bg-base-100 rounded-box z-20 w-20 p-2 shadow">
+          <ul className="dropdown-content menu bg-secondary rounded-box z-20 w-20 p-2 shadow">
             <li
               onClick={() => handleLanguageChange('en')}
               className="flex items-center p-2 hover:bg-primary hover:text-white rounded-lg cursor-pointer"
